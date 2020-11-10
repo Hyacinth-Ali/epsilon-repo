@@ -1,8 +1,25 @@
-context Tree {
+context CDM!CDM {
 	
 	constraint NotA {
 		
-		check : self.label <> 'a'
+		check : self.name == 'a'
+		
+		message : 'Class diagram violation'
+		
+	}
+	
+	constraint NotB {
+		check : USECASE!UseCase.name == 'b'
+		
+		message : 'Use case violation'
+	}
+}
+
+context UseCase {
+	
+	constraint NotA {
+		
+		check : self.name == 'a'
 		
 		message : 'A tree cannot be named a'
 		

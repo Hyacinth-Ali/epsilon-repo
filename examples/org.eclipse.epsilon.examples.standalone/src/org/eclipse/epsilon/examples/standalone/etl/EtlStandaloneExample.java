@@ -38,7 +38,7 @@ public class EtlStandaloneExample extends EpsilonStandaloneExample {
 	public List<IModel> getModels() throws Exception {
 		List<IModel> models = new ArrayList<IModel>();
 		models.add(createEmfModel("Source", "models/Tree.xmi", "models/Tree.ecore", true, false));
-		models.add(createEmfModel("Target", "models/Copy.xmi", "models/Tree.ecore", false, true));
+		models.add(createEmfModel("Target", "models/copy2.xmi", "models/Tree.ecore", false, true));
 		return models;
 	}
 
